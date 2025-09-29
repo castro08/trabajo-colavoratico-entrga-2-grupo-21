@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synergy | Admin</title>
+    <link rel="stylesheet" href="src/css/synerg.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body style="background-color: #141414;">
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <nav class="nav-container">
+                <img class="thumb active" src="src/img/logo.png" width="100" >
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                  <div class="input-group input-group-custom w-25 mx-auto">
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+                    <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                    </span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="NuestrosServicios.html" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="Login.html" class="nav-link">Cerrar sesión</a></li>
+                    <li class="nav-item">
+                        
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa-solid fa-user me-1"></i>Administrador</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<div style="padding-left: 8%; padding-right: 8%; background-color: #121212; min-height: 100vh;">
+  <section class="position-relative">
+    <h2 class="text-primary mb-4">Gestión de Servicios</h2>
+
+    <!-- Formulario -->
+    <div class="card bg-dark text-light p-4 shadow">
+      <form id="serviceForm">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" id="nombre" class="form-control bg-secondary text-light border-0" placeholder="Nombre de servicio" required>
+          </div>
+          <div class="col-md-6">
+            <select id="categoria" class="form-control bg-secondary text-light border-0" required>
+              <option value="">Seleccionar Categoría</option>
+              <option>Programa</option>
+              <option>Módulo</option>
+              <option>Integración</option>
+              <option>Desarrollo</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3 ">
+          <div class="col-md-6">
+            <input type="number" id="precio" class="form-control bg-secondary text-light border-0" placeholder="Precio" required>
+          </div>
+          <div class="col-md-6">
+            <select id="facturacion" class="form-control bg-secondary text-light border-0" required>
+              <option value="">Tipo de facturación</option>
+              <option>Pago Único</option>
+              <option>Por unidad</option>
+              <option>Por hora</option>
+              <option>Variable</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" id="imagen" class="form-control bg-secondary text-light border-0" placeholder="URI Imagen">
+          <a href="https://picsum.photos/images" target="_blank" class="btn btn-outline-info">
+            Ver Galería
+          </a>
+        </div>
+        <div class="mb-3">
+          <textarea id="descripcion" class="form-control bg-secondary text-light border-0" placeholder="Descripción del producto"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success me-2">Guardar</button>
+          <button type="reset" class="btn btn-outline-light">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Tabla -->
+    <div class="table-responsive p-3">
+      <table class="table table-dark table-hover text-center align-middle">
+        <thead class="table-secondary text-dark">
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Tipo Facturación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="serviceTable"></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+
+
+<hr style="color: #0066cc;"/>
+
+
+
+
+    <!-- Footer -->
+  <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                   <img class="thumb active" src="src/img/logo.png" width="200" >
+                    <p>Calle 82 n 8 25, Chapinero Bogota D.C, Col</p>
+                    <br>
+                    <div class="social-links">
+                         <i class="fa-regular fa-copyright"></i> 
+                         <span>Tecnologys add services</span> 
+                 
+                    </div>
+                </div>
+                    <div class="footer-column">
+                    <h3>Menú princiapl</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Productos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>La compañía</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">La compañia</a></li>
+                        <li><a href="#">Ubicación</a></li>
+                        <li><a href="#">El equipo</a></li>
+                        <li><a href="#">Nuestra Historia</a></li>
+                    </ul>
+                </div>
+             
+                <div class="footer-column">
+                    <h3>Enucentranos en</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/login.php">Facebook</a></li>
+                        <li><a href="https://x.com">X/Twitter</a></li>
+                        <li><a href="https://www.instagram.com/?hl=es-la%E2%81%B8">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script src="src/js/Administrar.js"></script>
+</body>
+</html>

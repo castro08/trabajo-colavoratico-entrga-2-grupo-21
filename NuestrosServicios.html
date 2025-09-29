@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synergy | Servicios</title>
+  <link rel="stylesheet" href="src/css/synerg.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    body { background-color: #141414; color: white; font-family: Arial, sans-serif; }
+    header { background-color: #000; padding: 15px 0; }
+    .nav-link { color: white !important; margin: 0 10px; }
+    .service-card-custom-custom img { max-height: 100px; object-fit: contain; }
+    .banner { background: url('https://picsum.photos/600/200') center/cover no-repeat; height:200px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold; }
+    .boletin { background: #fff; color:#000; height:200px; display:flex; flex-direction:column; align-items:center; justify-content:center; border: 2px solid #0d6efd; border-radius:8px; }
+    .otros-servicios { background-color:#2c2c54; padding:20px; display:flex; justify-content:space-between; align-items:center; border-radius:8px; }
+    .card-product img { height:150px; object-fit:cover; }
+    .footer-links { list-style:none; padding:0; }
+    .footer-links li { margin-bottom: 6px; }
+    .footer-links a { color: #bbb; text-decoration:none; }
+    .footer-links a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+   <header>
+        <div class="container">
+            <nav class="nav-container">
+                <img class="thumb active" src="src/img/logo.png" width="100" >
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                  <div class="input-group input-group-custom w-25 mx-auto">
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+                    <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                    </span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="NuestrosServicios.html" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="Login.html" class="nav-link">Iniciar sesión</a></li>
+                    <li class="nav-item">
+                        
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa-solid fa-cart-shopping me-1"></i>Carrito</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <!-- MAIN -->
+  <main class="container my-5">
+
+    <!-- Sección 1: Nuestros Servicios -->
+    <h2 class="text-center mb-4">NUESTROS SERVICIOS</h2>
+    <div class="row text-center mb-4">
+      <div class="col service-card-custom"><img src="src/img/servicio1.jpg" class="img-fluid mb-2"><p>ERP SYSTEM TIME</p></div>
+      <div class="col service-card-custom"><img src="src/img/servicio2.jpg" class="img-fluid mb-2"><p>MÓDULOS DE SELECCIÓN</p></div>
+      <div class="col service-card-custom"><img src="src/img/servicio3.webp" class="img-fluid mb-2"><p>MÓDULOS DE CONTRATACIÓN ELECTRÓNICA</p></div>
+      <div class="col service-card-custom"><img src="src/img/servicio4.webp" class="img-fluid mb-2"><p>FIRMA ELECTRÓNICA</p></div>
+      <div class="col service-card-custom"><img src="src/img/servicio5.png" class="img-fluid mb-2"><p>WEB SERVICES</p></div>
+      <div class="col service-card-custom"><img src="src/img/servicio6.jpg" class="img-fluid mb-2"><a href="Servicios.html">DESARROLLO DE SOFTWARE</a></div>
+    </div>
+
+    <!-- Banner + Boletín -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <div class="banner text-white">Pregunta por <br> nuestros valores agregados</div>
+      </div>
+      <div class="col-md-4">
+        <div class="boletin text-center">
+          <h5>Boletín informativo</h5>
+          <button class="btn btn-primary mt-2">Explorar</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Sección 2: Desarrollos más vendidos -->
+    <h2 class="mb-3">Desarrollos más vendidos</h2>
+    <p class="text-secondary">A continuación compartimos los desarrollos que se encuentran bajo demanda actualmente.</p>
+    <div class="row text-center mb-5">
+      <div class="col-md-2"><img src="src/img/top1.jpg" class="img-fluid mb-2"><p>PÁGINA WEB CORPORATIVA</p></div>
+      <div class="col-md-2"><img src="src/img/top2.jpg" class="img-fluid mb-2"><p>TIENDA EN LÍNEA</p></div>
+      <div class="col-md-2"><img src="src/img/top3.png" class="img-fluid mb-2"><p>INTEGRACIÓN DE SISTEMAS Y APIS</p></div>
+      <div class="col-md-2"><img src="src/img/top4.webp" class="img-fluid mb-2"><p>ARQUITECTURA DE SOFTWARE</p></div>
+      <div class="col-md-2"><img src="src/img/top5.webp" class="img-fluid mb-2"><p>DESARROLLO DE PRODUCTO MÍNIMO</p></div>
+    </div>
+
+    <!-- Sección 3: Productos recomendados -->
+    <h2 class="text-primary mb-4">Productos Recomendados</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card bg-dark text-center card-product">
+          <img src="src/img/rec1.jpg" class="card-img-top">
+          <div class="card-body" style="color:white">
+            <h5>BOT DINÁMICO</h6>
+            <p>Desde $2.000.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-dark text-center card-product">
+          <img src="src/img/rec2.jpg" class="card-img-top">
+          <div class="card-body" style="color:white">
+            <h6>LANDING PAGE</h5>
+            <p>Desde $1.800.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-dark text-center card-product">
+          <img src="src/img/top1.jpg" class="card-img-top">
+          <div class="card-body" style="color:white">
+            <h6>PÁGINA WEB CORPORATIVA</h5>
+            <p>Desde $3.500.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-dark text-center card-product">
+          <img src="src/img/rec4.jpg" class="card-img-top">
+          <div class="card-body" style="color:white">
+            <h6>INFORMES DETALLADOS<br>LOOKER STUDIO – POWER BI</h5>
+            <p >Desde $200.000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                   <img class="thumb active" src="src/img/logo.png" width="200" >
+                    <p>Calle 82 n 8 25, Chapinero Bogota D.C, Col</p>
+                    <br>
+                    <div class="social-links">
+                         <i class="fa-regular fa-copyright"></i> 
+                         <span>Tecnologys add services</span> 
+                 
+                    </div>
+                </div>
+                    <div class="footer-column">
+                    <h3>Menú princiapl</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Productos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>La compañía</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">La compañia</a></li>
+                        <li><a href="#">Ubicación</a></li>
+                        <li><a href="#">El equipo</a></li>
+                        <li><a href="#">Nuestra Historia</a></li>
+                    </ul>
+                </div>
+             
+                <div class="footer-column">
+                    <h3>Enucentranos en</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/login.php">Facebook</a></li>
+                        <li><a href="https://x.com">X/Twitter</a></li>
+                        <li><a href="https://www.instagram.com/?hl=es-la%E2%81%B8">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>

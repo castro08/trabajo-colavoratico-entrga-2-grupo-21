@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synergy | Servicios</title>
+  <link rel="stylesheet" href="src/css/synerg.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <nav class="nav-container">
+                <img class="thumb active" src="src/img/logo.png" width="100" >
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                  <div class="input-group input-group-custom w-25 mx-auto">
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+                    <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                    </span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="NuestrosServicios.html" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="Login.html" class="nav-link">Iniciar sesión</a></li>
+                    <li class="nav-item">
+                        
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa-solid fa-cart-shopping me-1"></i>Carrito</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+  <main>
+
+    <!-- INICIO: Sección detalle de servicio - Desarrollo de Software -->
+    <section id="service-detail" class="service-detail">
+      <div class="container service-detail-grid">
+        <!-- Galería -->
+        <div class="service-gallery" aria-label="Galería del servicio">
+          <div class="main-image">
+            <img id="mainServiceImage" src="src/img/desarrollo de software_4.jpg" alt="Desarrollo de Software - Synergy" />
+          </div>
+          <div class="thumbs" role="list">
+            <img class="thumb active" src="src/img/desarrollo de software_1.jpg" alt="Vista 1" data-full="src/dev-software-main.jpg" role="listitem">
+            <img class="thumb" src="src/img/desarrollo de software_2.jpg" alt="Vista 2" data-full="src/dev-thumb-2.jpg" role="listitem">
+            <img class="thumb" src="src/img/desarrollo de software_3.jpg" alt="Vista 3" data-full="src/dev-thumb-3.jpg" role="listitem">
+          </div>
+        </div>
+
+        <!-- Información principal -->
+        <div class="service-info" aria-labelledby="serviceTitle">
+          <h1 id="serviceTitle">Desarrollo de Software</h1>
+
+          <div class="meta-row">
+            <div class="rating" aria-hidden="true">
+              ★★★★☆ <span class="reviews-count"> (24 reviews)</span>
+            </div>
+            <div class="sku">COD: S-WEB-DS</div>
+          </div>
+
+          <div class="price-row">
+            <div class="price" id="servicePrice" data-base-price="8500000">$ 8.500.000 COP</div>
+            <div class="package-select">
+              <label for="packageSelect">Seleccionar paquete</label>
+              <select id="packageSelect" aria-label="Seleccionar paquete">
+                <option value="basic" data-price="4500000">Básico — Landing + CMS — $ 4.500.000</option>
+                <option value="standard" data-price="6500000" selected>Estándar — App web + Integraciones — $ 6.500.000</option>
+                <option value="premium" data-price="8500000">Premium — App + Integración completa + Soporte — $ 8.500.000</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="short-desc">
+            Desarrollo de aplicaciones a medida: web apps escalables, integraciones y soporte inicial para acelerar tu transformación digital.
+          </p>
+
+          <ul class="benefits">
+            <li>Arquitectura escalable basada en mejores prácticas.</li>
+            <li>Integración con APIs y sistemas existentes.</li>
+            <li>Pruebas, despliegue automatizado y soporte inicial.</li>
+          </ul>
+
+          <div class="cta-row">
+            <button id="buyServiceBtn" class="btn btn-primary">Adquirir servicio</button>
+            <button id="quoteBtn" class="btn btn-success">Solicitar cotización</button>
+            <button id="favBtn" class="icon-btn" aria-pressed="false" title="Agregar a favoritos">❤</button>
+          </div>
+
+          <div class="delivery">Plazo estimado: <strong>6–12 semanas</strong> · Soporte inicial: <strong>30 días</strong></div>
+        </div>
+      </div>
+
+      <!-- Servicios relacionados -->
+      <div class="container related-services">
+        <h2>Servicios relacionados</h2>
+        <div class="related-grid">
+          <article class="related-card" data-service="bot-dinamico">
+            <img src="src/img/desarrollo de software_1.jpg" alt="Bot Dinámico">
+            <h3>Bot Dinámico</h3>
+            <div class="price-sm">$ 2.000.000</div>
+          </article>
+
+          <article class="related-card" data-service="landing-page">
+            <img src="src/img/desarrollo de software_2.jpg" alt="Landing Page">
+            <h3>Landing Page</h3>
+            <div class="price-sm">$ 1.800.000</div>
+          </article>
+
+          <article class="related-card" data-service="tienda-en-linea">
+            <img src="src/img/desarrollo de software_3.jpg" alt="Tienda en línea">
+            <h3>Tienda en línea</h3>
+            <div class="price-sm">$ 3.200.000</div>
+          </article>
+
+          <article class="related-card" data-service="integracion-apis">
+            <img src="src/img/desarrollo de software_4.jpg" alt="Integración de sistemas y APIs">
+            <h3>Integración de sistemas y APIs</h3>
+            <div class="price-sm">$ 1.500.000</div>
+          </article>
+
+          <article class="related-card" data-service="arquitectura-software">
+            <img src="src/img/desarrollo de software_5.jpg" alt="Arquitectura de software">
+            <h3>Arquitectura de Software</h3>
+            <div class="price-sm">$ 800.000</div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+      <div class="container service-reviews" id="serviceReviews">
+        <h2>Reseñas</h2>
+        <div class="reviews-list">
+          <div class="review-card">
+            <div class="review-author">
+              <div class="author-avatar">AG</div>
+              <div>
+                <strong>Andrés Gómez</strong>
+                <div class="review-meta">CEO — FintechX · Agosto 12, 2025</div>
+              </div>
+            </div>
+            <p>"El equipo entregó una plataforma robusta y modular; la integración con nuestro ERP fue impecable y el soporte inicial fue muy útil."</p>
+            <div class="stars">★★★★★</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-author">
+              <div class="author-avatar">LM</div>
+              <div>
+                <strong>Laura Méndez</strong>
+                <div class="review-meta">Gerente TI — RetailPlus · Julio 20, 2025</div>
+              </div>
+            </div>
+            <p>"Buen entendimiento del negocio y entregables claros. Recomiendo pedir la versión estándar si requieren integraciones."​</p>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIN: Sección detalle de servicio -->
+
+  </main>
+
+    <!-- Footer -->
+     <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                   <img class="thumb active" src="src/img/logo.png" width="200" >
+                    <p>Calle 82 n 8 25, Chapinero Bogota D.C, Col</p>
+                    <br>
+                    <div class="social-links">
+                         <i class="fa-regular fa-copyright"></i> 
+                         <span>Tecnologys add services</span> 
+                 
+                    </div>
+                </div>
+                    <div class="footer-column">
+                    <h3>Menú princiapl</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Productos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>La compañía</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">La compañia</a></li>
+                        <li><a href="#">Ubicación</a></li>
+                        <li><a href="#">El equipo</a></li>
+                        <li><a href="#">Nuestra Historia</a></li>
+                    </ul>
+                </div>
+             
+                <div class="footer-column">
+                    <h3>Enucentranos en</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/login.php">Facebook</a></li>
+                        <li><a href="https://x.com">X/Twitter</a></li>
+                        <li><a href="https://www.instagram.com/?hl=es-la%E2%81%B8">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+  <script src="src/js/synerg.js"></script>
+  <script src="src/js/service-detail.js"></script>
+</body>
+</html>
