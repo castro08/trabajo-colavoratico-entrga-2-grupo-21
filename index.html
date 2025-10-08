@@ -116,5 +116,15 @@
     </footer>
 
     <script src="src/js/synerg.js"></script>
+    <script>
+         document.getElementById("Btn_Contacto").addEventListener("click", function () {
+      // Número en formato internacional: Colombia = 57
+      let telefono = "573114160527";
+      let mensaje = "¡Hola! Quiero más información."; // mensaje opcional
+      let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(url, "_blank"); // abre en nueva pestaña
+    });
+    </script>
 </body>
 </html>
