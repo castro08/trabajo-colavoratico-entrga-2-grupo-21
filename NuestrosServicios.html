@@ -22,6 +22,42 @@
     .footer-links li { margin-bottom: 6px; }
     .footer-links a { color: #bbb; text-decoration:none; }
     .footer-links a:hover { text-decoration:underline; }
+
+   .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+#cerrarModal {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#cerrarModal:hover {
+  background: #0056b3;
+}
+
+
   </style>
 </head>
 <body>
@@ -74,10 +110,14 @@
       <div class="col-md-4">
         <div class="boletin text-center">
           <h5>Boletín informativo</h5>
-          <button class="btn btn-primary mt-2">Explorar</button>
+          <button class="btn btn-primary mt-2" id="openModalBtn">Explorar</button>
+
         </div>
       </div>
     </div>
+
+
+          <div id="modalContainer"></div>
 
 
 
@@ -182,3 +222,38 @@
     </footer>
 </body>
 </html>
+<script>
+function crearModal(titulo, contenido) {
+  const modalContainer = document.getElementById("modalContainer");
+
+  // Inyectar modal
+  modalContainer.innerHTML = `
+    <div class="modal-overlay">
+      <div class="modal">
+        <h2>${titulo}</h2>
+        <p>${contenido}</p>
+        <button id="cerrarModal">Cerrar</button>
+      </div>
+    </div>
+  `;
+
+  // Evento para cerrar
+  document.getElementById("cerrarModal").addEventListener("click", () => {
+    modalContainer.innerHTML = ""; // limpia el modal
+  });
+
+  // Cerrar clicando fuera del modal
+  modalContainer.querySelector(".modal-overlay").addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal-overlay")) {
+      modalContainer.innerHTML = "";
+    }
+  });
+}
+
+
+// Abrir modal al dar clic en el botón
+document.getElementById("openModalBtn").addEventListener("click", () => {
+  crearModal("Novedades del Proyecto", "Este mes avanzamos en la implementación de nuevas funciones dentro de nuestra plataforma, incluyendo mejoras en la seguridad, un sistema de notificaciones en tiempo real y la optimización de la velocidad de carga.");
+});
+
+</script>
