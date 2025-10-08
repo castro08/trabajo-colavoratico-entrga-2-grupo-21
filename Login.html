@@ -133,18 +133,31 @@
   </div>
 
   <script>
-       document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // Evita recargar la página
+     let usuarios = [];
 
-      let usuario = document.getElementById("usuario").value;
-      let clave = document.getElementById("clave").value;
+    // Cargar JSON con fetch
+    fetch("src/data/users.json")
+      .then(res => {
+        if (!res.ok) throw new Error("No se pudo cargar users.json");
+        return res.json();
+      })
+      .then(data => {
+        usuarios = data; // guarda los usuarios en la variable
+      })
+      .catch(err => console.error(err));
 
-      // Validación sencilla
-      if (usuario === "admin" && clave === "1234") {
-        // Redirigir a otra página
-        window.location.href = "Administrar.html";
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const user = document.getElementById("usuario").value.trim();
+      const pass = document.getElementById("clave").value;
+
+      const encontrado = usuarios.find(u => u.username === user && u.password === pass);
+
+      if (encontrado) {
+        window.location.href = encontrado.redir;
       } else {
-        alert('Usuario o contraseña incorrectos')
+        alert("Usuario o contraseña incorrectos");
       }
     });
   </script>
