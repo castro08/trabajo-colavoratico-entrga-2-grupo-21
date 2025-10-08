@@ -172,11 +172,39 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
- document.getElementById("Btn_Contacto").addEventListener("click", function () {
-      // Número en formato internacional: Colombia = 57
-      let telefono = "573114160527";
-      let mensaje = "¡Hola! Quiero más información."; // mensaje opcional
-      let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
-      window.open(url, "_blank"); // abre en nueva pestaña
-    });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reviewsContainer = document.getElementById("reviewsList");
+
+  // Cargar el JSON reseñas
+  fetch("src/data/reviews.json")
+    .then(res => res.json())
+    .then(reviews => {
+        console.log(reviews)
+      reviews.forEach(r => {
+        // Crear tarjeta
+        const card = document.createElement("div");
+        card.classList.add("review-card");
+
+        // Autor + avatar + rol/fecha
+        card.innerHTML = `
+          <div class="review-author">
+            <div class="author-avatar">${r.avatar}</div>
+            <div>
+              <strong>${r.author}</strong>
+              <div class="review-meta">${r.role} · ${r.date}</div>
+            </div>
+          </div>
+          <p>"${r.review}"</p>
+          <div class="stars">${"★".repeat(r.stars)}${"☆".repeat(5 - r.stars)}</div>
+        `;
+
+        // Agregar al contenedor
+        reviewsContainer.appendChild(card);
+      });
+    })
+    .catch(err => console.error("Error cargando reseñas:", err));
+});
+
+
